@@ -177,3 +177,9 @@ cython_debug/
 *.swp
 *.tmp
 *~
+*.jsonl_.gstmp
+*.gstmp
+*.jsonl
+*.tmp
+*.swp
+*~
