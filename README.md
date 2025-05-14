@@ -1,3 +1,29 @@
+# ✨ NoTraM.EnhancedNCC: A Norwegian Corpus Curation & Pretraining Toolkit
+
+This repository contains scripts, datasets, and processing pipelines for building high-quality training data for large language models, with a strong focus on **Norwegian** corpora. Some additions for **Scandinavian**, and **English** corpora.
+
+The repo has some tools and examples for:
+
+- 🧽 **Cleaning and filtering** raw data based on evaluation metrics  
+- 🧠 **Evaluating questions and text quality** using external gRPC services  
+- 🗣️ **Generating instruct data** with chat templates (e.g., LLaMA 3)  
+- 🔁 **Augmenting datasets** with multiple prompt styles and few-shot variations  
+- 🧼 **Semantic deduplication** using MinHash techniques  
+- 📚 **Flashcard and translation evaluation**, including flashcard QA extraction  
+- 🌍 **Multilingual support** for Danish, Swedish, Norwegian Nynorsk & Bokmål, and English  
+- 🔗 **GlotLID language detection**  
+- 🔧 Modular scripts for every stage: cleaning, evaluation, deduplication, augmentation  
+
+
+## 📡 gRPC Commands
+
+All gRPC-based data processing (evaluation, augmentation, translation, flashcards) is documented separately.
+
+📄 [View gRPC Commands →](./gRPC_commands.md)
+
+---
+## 🧹 Commands for Cleaning and Filtering
+
 ### Flashcards
 
 #### Eval and instruct generation:
