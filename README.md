@@ -111,9 +111,8 @@ done
 
 ---
 
-# How to regenerate
-
-Run this in the root directory:
+# How to Regenerate File Tree
+Please note that the jsonl-files are not included in the repo because they are way to large. Generate the file tree by running this command in the root directory. It will modify this README-file:
 
 ```bash
 ./create_tree.bash
