@@ -1,0 +1,61 @@
+# ----- Simple Q/A with full answer ----------------------------------
+Spørsmål: {question}\n\nSvar: {full_text_answer}
+Oppgave: {question}\n\nFasit: {full_text_answer}
+Spørsmål: {question}\n\nRiktig svar: {full_text_answer}
+Problemstilling:\n{question}\n\nKorrekt svar: {full_text_answer}
+Les spørsmålet nøye:\n{question}\n\nSvar: {full_text_answer}
+
+# ----- Lettered choices ---------------------------------------------
+Spørsmål: {question}\nHvilket alternativ er riktig?\n{letters}\n\nSvar: {answer}
+Oppgave: {question}\nVelg riktig alternativ blant punktene under:\n{letters_bullets}\n\nSvar: {answer}
+Problem: {question}\nLøsning:\n{letters_dashes}\n\nFasit: {answer}
+Problem: {question}\nMulige svar:\n{letters_dashes}\n\nFasit: {answer}
+Spørsmål: {question}\n{letters}\n\nEr det riktige svaret {options}?\nSvar: {answer}
+Spørsmål: {question}\nAlternativene er:\n{letters_bullets}\n\nRiktig bokstav: {answer}
+Oppgave: {question}\nVelg én av disse:\n{letters_dashes}\n\nFasit: {answer}
+Spørsmål: {question}\nHva er riktig?\n{letters}\n\nSvar: {answer}
+Oppgave: {question}\nHvilket alternativ stemmer?\n{letters_bullets}\n\nSvarbokstav: {answer}
+Spørsmål: {question}\nMarker det riktige svaret.\n{letters}\n\nSvar: {answer}
+Oppgave: {question}\nMulige svar:\n{letters_bullets}\n\nDet riktige svaret er: {answer}
+Problem: {question}\nSe alternativene nedenfor:\n{letters_dashes}\n\nRiktig svar: {answer}
+Spørsmål: {question}\nVelg den korrekte påstanden.\n{letters}\n\nSvar: {answer}
+Oppgave: {question}\nKun ett alternativ er riktig.\n{letters_bullets}\n\nSvar: {answer}
+Spørsmål: {question}\n{letters}\n\nHva velger du?\nSvar: {answer}
+
+# ----- Plain list (bullets / commas) --------------------------------
+Oppgave: {question}\n{plain_bullets}\n\nKorrekt svar: {answer_text}
+Spørsmål: {question}\n{plain_commas}.\n\nRiktig svar: {answer_text}
+Spørsmål: {question}\n{plain_commas}.\n\nSvar: {answer_text}
+Oppgave: {question}\n{plain_bullets}\n\nSvar: {answer_text}
+Spørsmål: {question}\n{plain_commas}.\n\nFasit: {answer_text}
+Oppgave: {question}\n{plain_commas}.\n\nKorrekt svar: {answer_text}
+Problem: {question}\n{plain_bullets}\n\nRiktig alternativ: {answer_text}
+Spørsmål: {question}\n{plain_commas}.\n\nSvar: {answer_text}
+Oppgave: {question}\n{plain_commas}.\n\nRiktig svar: {answer_text}
+{question}\n{plain_bullets}\n\nHva er korrekt?\n\nSvar: {answer_text}
+{question}\n{plain_commas}.\n\nSvar (tekst): {answer_text}
+Quiz:\n{question}\n{plain_bullets}\n\nRiktig svar: {answer_text}
+{question}\n{plain_commas}.\n\nSvar: {answer_text}
+Oppgave: {question}\n{plain_bullets}\n\nDet riktige svaret er: {answer_text}
+{question}\n{plain_commas}.\n\nSvar: {answer_text}
+Spørsmål: {question}\n{plain_commas}.\n\nFasit: {answer_text}
+Problem: {question}\n{plain_bullets}\n\nRiktig svar: {answer_text}
+{question}\n{plain_commas}.\n\nSvar: {answer_text}
+Oppgave: {question}\n{plain_commas}.\n\nKorrekt svar: {answer_text}
+Spørsmål: {question}\n{plain_bullets}\n\nSvar: {answer_text}
+Problem: {question}\n{plain_commas}.\n\nRiktig svar: {answer_text}
+{question}\n{plain_commas}.\n\nSvar: {answer_text}
+Utfordring: {question}\n{plain_bullets}\n\nHva er riktig?\n\nSvar: {answer_text}
+Oppgave: {question}\n{plain_commas}.\n\nLøsning: {answer_text}
+{question}\n{plain_commas}.\n\nRiktig alternativ: {answer_text}
+Quiz-spørsmål: {question}\n{plain_bullets}\n\nFasit: {answer_text}
+Spørsmål: {question}\n{plain_commas}.\n\nSvar: {answer_text}
+Oppgave: {question}\n{plain_commas}.\n\nKorrekt svar: {answer_text}
+Utfordring: {question}\n{plain_bullets}\n\nSvar: {answer_text}
+{question}\n{plain_commas}.\n\nRiktig svar: {answer_text}
+
+# ----- Multilingual problem/solution --------------------------------
+Problem: {question}\nSolution:\n{letters_dashes}\n\nAnswer: {answer}
+Problem: {question}\nLøsning:\n{letters_dashes}\n\nFacit: {answer}
+Problem: {question}\nLösning:\n{letters_dashes}\n\nFacit: {answer}
+Problem: {question}\nLøysing:\n{letters_dashes}\n\nFasit: {answer}
