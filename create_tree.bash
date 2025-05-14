@@ -20,14 +20,6 @@ TREE_SECTION="$HEADING
 
 $FILE_TREE
 
-### How to regenerate
-
-Run this in the root directory:
-
-\`\`\`bash
-./create_tree.bash
-\`\`\`"
-
 # If the heading exists, replace from that point on
 if grep -q "^$HEADING" "$README"; then
   awk -v heading="$HEADING" -v section="$TREE_SECTION" '

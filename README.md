@@ -1,3 +1,98 @@
+---
+
+### Flashcards
+
+#### Eval and instruct generation:
+```bash
+python process_eval_flashcards.py \
+  --input_file all_text_flash_complete_qa_eval.jsonl \
+  --output_file all_text_flash_complete_qa_eval_best_llama3.jsonl \
+  --chat_template meta-llama/Llama-3.1-8B-Instruct
+```
+
+#### Optionally (Note that I will only use part of this):
+```bash
+python process_eval_flashcards.py \
+  --input_file all_text_flash_complete_qa_eval.jsonl \
+  --output_file all_text_flash_complete_qa_eval_best.jsonl
+```
+
+#### Limit to 1M:
+```bash
+head -n 1000000 ../3k_flashcards/all_text_flash_complete_qa_eval_best.jsonl > train_all_text_flash_complete_qa_eval_best_1M.jsonl
+```
+
+#### Split rest:
+```bash
+tail -n +1000001 all_text_flash_complete_qa_eval_best_llama3.jsonl > ../3k_flashcards/train_all_text_flash_complete_qa_eval_best_rest_llama3.jsonl
+```
+
+---
+
+### Translation
+
+#### Download and preprocess:
+```bash
+python download_translation_datasets.py --output_file translation_english_norwegian.py
+python add_textfield.py --input_file translation_english_norwegian.jsonl --output_file translation_english_norwegian_text.jsonl
+```
+
+#### Shuffle and split into 8 parts:
+```bash
+shuf translation_english_norwegian_text.jsonl -o shuffled.tmp && \
+split -n l/8 -d --additional-suffix=.jsonl shuffled.tmp translation_english_norwegian_part && \
+rm shuffled.tmp && \
+for i in {0..7}; do mv translation_english_norwegian_part0${i}.jsonl translation_english_norwegian_part$((i+1)).jsonl; done
+```
+
+---
+
+### Magpie / Magpie NO
+Description TBD.
+
+---
+
+#### Source files:
+```
+/nfsmounts/ficino/lv_ai_2_ficino/perk/NCC2/instruction_sets_0/scripts/process_magpie_instructions_norwegian.py
+/nfsmounts/ficino/lv_ai_2_ficino/perk/NCC2/instruction_sets_0/download/magpie_300k_norwegian_filtered.jsonl
+```
+
+---
+
+### Multiturn
+
+#### English multiturn (no NO data):
+```bash
+python download_multi_magpie.py --output_file multi_magpie_english.jsonl
+cp multi_magpie_english.jsonl ../4a_evalueted_noglotlid/
+```
+
+---
+
+#### Add GlotLID:
+```bash
+cd /nfsmounts/datastore0/perk/enhancedNCC/5a_cleaned_noglotlid
+python annotate_multi_glotlid.py --input_dir ../5a_cleaned_noglotlid/ --output_dir ../5b_cleaned_glotlid/
+```
+
+#### Run semantic deduplication:
+```bash
+cd ../5b_cleaned_glotlid
+for f in *.jsonl; do \
+  python run_sem_dedup.py --input_file "$f" --output_file "../6c_cleaned_glotlid_semdedup/$f"; \
+done
+```
+
+---
+
+# How to regenerate
+
+Run this in the root directory:
+
+```bash
+./create_tree.bash
+```
 
 # File Tree
 
@@ -729,24 +824,3 @@
 - LICENSE
 - README.md
 
-### How to regenerate
-
-Run this in the root directory:
-
-```bash
-./create_tree.bash
-```
-### How to regenerate
-
-Run this in the root directory:
-
-```bash
-./create_tree.bash
-```
-### How to regenerate
-
-Run this in the root directory:
-
-```bash
-./create_tree.bash
-```
