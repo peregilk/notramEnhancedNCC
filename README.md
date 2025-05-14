@@ -1,4 +1,5 @@
-# ✨ NoTraM.EnhancedNCC: A Norwegian Corpus Curation & Pretraining Toolkit
+# ✨ NoTraM - EnhancedNCC
+## A Norwegian Corpus Curation & Pretraining Toolkit
 
 This repository contains scripts, datasets, and processing pipelines for building high-quality training data for large language models, with a strong focus on **Norwegian** corpora. Some additions for **Scandinavian**, and **English** corpora.
 
