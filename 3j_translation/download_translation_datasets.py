@@ -130,8 +130,8 @@ def main():
     parser.add_argument("--mode", required=True, choices=["enno", "ennn", "nonn"],
                         help="Language pair mode: enno, ennn, or nonn.")
     parser.add_argument("--output_file", required=True, help="Path to the output JSONL file.")
-    parser.add_argument("--sim_threshold", type=float, default=0.9,
-                        help="Cosine similarity threshold (default: 0.9).")
+    parser.add_argument("--sim_threshold", type=float, default=0.85,
+                        help="Cosine similarity threshold (default: 0.85).")
     parser.add_argument("--batch_size", type=int, default=32, help="Batch size for embedding.")
     parser.add_argument("--device", default="cpu", help='"cpu" or "cuda" (default: cpu).')
     parser.add_argument("--max_examples", type=int, default=None,
@@ -165,7 +165,7 @@ def main():
 
     logging.info("Loading sentence transformer model...")
     model = SentenceTransformer(
-        "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+        "BAAI/bge-m3",
         device=args.device
     )
 
