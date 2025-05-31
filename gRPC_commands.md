@@ -99,4 +99,16 @@ python grpc_processor.py --input_file gs://synthncc/flasheval/all_text_flash_par
 
 ```bash
 python grpc_processor.py --input_file gs://synthncc/transeval/translation_english_norwegian_part1.jsonl --task transeval --output_file translation_english_norwegian_part1.jsonl --output_bucket_dir gs://synthncc/transeval/ --template_file translation_evaluation_template.txt
+
+
+#gsutil -m cp translation_english_nynorsk_part* gs://synthncc/transeval/
+python grpc_processor.py --input_file gs://synthncc/transeval/translation_english_nynorsk_part01.jsonl --task transeval --output_file translation_english_nynorsk_part01_eval.jsonl --output_bucket_dir gs://synthncc/transeval/ --template_file translation_evaluation_template_nbnn.txt
+python grpc_processor.py --input_file gs://synthncc/transeval/translation_english_nynorsk_part02.jsonl --task transeval --output_file translation_english_nynorsk_part02_eval.jsonl --output_bucket_dir gs://synthncc/transeval/ --template_file translation_evaluation_template_nbnn.txt
+python grpc_processor.py --input_file gs://synthncc/transeval/translation_english_nynorsk_part03.jsonl --task transeval --output_file translation_english_nynorsk_part03_eval.jsonl --output_bucket_dir gs://synthncc/transeval/ --template_file translation_evaluation_template_nbnn.txt
+python grpc_processor.py --input_file gs://synthncc/transeval/translation_english_nynorsk_part04.jsonl --task transeval --output_file translation_english_nynorsk_part04_eval.jsonl --output_bucket_dir gs://synthncc/transeval/ --template_file translation_evaluation_template_nbnn.txt
+
+#gsutil -m cp bokmal_nynorsk_nynorskpressekontor_part* gs://synthncc/transeval/
+python grpc_processor.py --input_file gs://synthncc/transeval/translation_english_nynorsk_part01.jsonl --task transeval --output_file translation_english_nynorsk_part01_eval.jsonl --output_bucket_dir gs://synthncc/transeval/ --template_file translation_evaluation_template_ennn.txt
+python grpc_processor.py --input_file gs://synthncc/transeval/translation_english_nynorsk_part02.jsonl --task transeval --output_file translation_english_nynorsk_part02_eval.jsonl --output_bucket_dir gs://synthncc/transeval/ --template_file translation_evaluation_template_ennn.txt
+
 ```
